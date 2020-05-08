@@ -1,0 +1,13 @@
+<h3> Login Page</h3>
+
+
+<form method="POST" action ="">
+	{% csrf_token %}
+
+	<p><input type="textbox" name="username" placeholder="username..." action="{% url 'list-total' %}"></p>
+	<p><input type="password" name="password" placeholder="password..."></p>
+
+	<p><input type="button" name="submit" value="Login">
+
+
+</form>
