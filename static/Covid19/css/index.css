@@ -1,0 +1,244 @@
+*,
+body {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:  Arial, Helvetica, sans-serif;
+}
+body {
+    display: flex; 
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.text-align {text-align: center;}
+.half {width: 50%;    margin-left: auto;
+    margin-right: auto;}
+.btn-color {background-color: #355dc5;}
+.line-height {line-height: 2;}
+.padding-top {padding-top: 5rem;}
+.letter-spacing {letter-spacing: .03rem;}
+h1{letter-spacing: .2rem;}
+.title {font-size: 20px;}
+
+
+section {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 25rem;
+    background-color: white;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+/******IMAGE*******/
+
+div.logo {
+    
+    position: absolute;
+    width: 10rem;
+    height: 5rem;
+    background-size: cover;
+    top :-1rem;
+    left: .5rem;
+}
+div.image {
+    background-image: linear-gradient(to right bottom, rgba(16, 17, 16, 0.733), rgba(14, 15, 15, 0.74)),url({% static 'Covid19/img/bg.jpg' %});
+    width: 100%;
+    height: 24rem;
+    background-size: cover;
+    color: whitesmoke;
+    padding: 1rem;
+    line-height: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/****BUTTON*********/
+
+input.btn {
+    margin-top: 2rem;
+    width: min-content;
+   padding: 1rem 1rem;
+    height: 3rem;
+    margin-right: auto;
+    margin-left: auto;
+    background-color: #355dc5;
+    border: none;
+    border-radius: .5rem;
+    color: white;
+    font-weight: bold;
+    box-shadow: 0px 15px 12px rgba(0, 0, 0, 0.25), 0px 19px 38px rgba(0, 0, 0, 0.25);
+
+}
+input.btn:active,
+input.btn:hover,
+input.text:focus {
+    outline: none;
+    cursor: pointer;
+}
+input.btn:link,
+input.btn:hover,
+.btn:visited {
+    border: 3px solid #355dc5;
+    background-color: white;
+    color:#355dc5 ;
+}
+input.text {
+    background-color: rgba(255, 255, 255, 0.883);
+    border-radius: 2px;
+    border: none;
+    border: 1px;
+    font-size: 1rem;
+    border-bottom :1px solid rgba(0, 0, 0, 0.685);
+}
+
+/*********  Section-2 ********************/
+.sec2 {
+    height: fit-content;
+    display: flex;
+    justify-content: space-around;
+}
+.recs {
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1rem;
+}
+.rec {
+    width: 9rem;
+    height: 9rem;
+    padding: 1rem;
+    background-color: rgb(255, 255, 255);
+    color: rgba(0, 0, 0, 0.74);
+    box-shadow: 0px 15px 12px rgba(0, 0, 0, 0.25), 0px 19px 38px rgba(0, 0, 0, 0.25);
+     margin-left: 1rem;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin-top: 2rem;
+    cursor: pointer;
+}
+.rec:hover {
+    padding: 2rem;
+}
+.document {
+    display: flex ;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+div.document > h4 {    width: 85%;
+}
+
+/********SECTION-3************/
+div.section3 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    line-height: 3;
+}
+form {
+    width :50%;
+    height: 20rem;
+    margin-left: auto;
+    margin-right: auto;
+    display: grid;
+}
+label {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/*******Footer ************/
+footer {
+    width: 100%;
+    height: 17rem;
+    background-color: #355dc5;
+    color: white;
+    font-size: 1rem;
+}
+div.logo1 {
+    background-image:url({% static 'Covid19/img/logo.png' %});
+    width: 10rem;
+    height: 5rem;
+    background-size: cover;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+}
+.profile {
+    width: 50%;
+    height: 10rem;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-around;
+    margin-right: auto;
+    margin-left: auto;
+}
+.dev { width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;justify-content: space-around;
+}
+div#Afeez {
+    background-image:url{% static 'Covid19/img/afeez.jpeg' %});
+    width: 4rem;
+    height: 4rem;
+    background-size: cover;
+    border-radius: 50%;
+}
+div#Aishat {
+    background-image:url({% static 'Covid19/img/aishat.jpg' %});
+    width: 4rem;
+    height: 4rem;
+    background-size: cover;
+    border-radius: 50%;
+}
+/**************CUSTOM ANIMATION************/
+
+
+/*******************MEDIA QUERIES******************/
+@media only screen and (max-width : 1440px) {
+    html {
+        font-size:22px;
+    }
+    h1 {font-size: 30px;}
+    h4{font-size: 1rem;}
+    .document.btn {width: 11rem;}
+    div.recs {padding: 1rem;}
+    .document {height: 15rem;padding: 0 .5rem;}
+
+}
+@media only screen and (max-width : 768px) {
+    html {
+        font-size:17px;
+    }
+    section {height: fit-content;}
+    h1 {font-size:30px ;}
+    .recs {width: 100%;}
+    .sec2 {height: fit-content;}
+    .document {height: 20rem;padding: 0 .5rem;}
+    .document.btn {width: 11rem;}
+    form {width: 70%;}
+    div.section3{margin-top: 0px;}
+    .profile {
+        width: 100%;}
+}
+@media only screen and (max-width : 375px) {
+    html {
+        font-size:16px;
+    }
+    .rec {margin-left: .5rem;}
+    form {width: 90%;}
+    div.image{justify-content: flex-end;height: 25rem;}
+    .profile {
+        width: 100%;}
+}

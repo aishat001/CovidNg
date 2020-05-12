@@ -19,7 +19,7 @@ class StateListView(viewsets.ModelViewSet):
 # 	serializer_class = StateSerializer
 def delete(request):
 	queryset = Covid.objects.all()
-	print(queryset)
+	
 	try:
 		queryset.delete()
 	
@@ -36,9 +36,9 @@ def latest(request):
 	
 
 	tab = []
-	url = 'covid2.html'
-	#url = requests.get('https://covid19.ncdc.gov.ng/')
-	soup = BeautifulSoup(open(url), 'html.parser')
+	#url = 'covid2.html'
+	url = requests.get('https://covid19.ncdc.gov.ng/')
+	soup = BeautifulSoup(url.content, 'html.parser')
 	custom1 = soup.find(class_ = "table-responsive")
 	data = custom1.find('tbody')
 	d2 = data.find_all('td')

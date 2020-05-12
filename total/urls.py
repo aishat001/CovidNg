@@ -4,7 +4,7 @@ from . import views
 
 
 router = routers.DefaultRouter()
-router.register('confirmed', views.TotalApi)
+router.register('confirmed', views.ConfirmedApi)
 router.register('active', views.ActiveApi)
 router.register('discharged', views.DischargedApi)
 router.register('death', views.DeathApi)

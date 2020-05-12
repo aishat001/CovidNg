@@ -31,6 +31,10 @@ class DeathApi(viewsets.ModelViewSet):
 	serializer_class = TotalDeathSerializer
 	http_method_names = ['get']
 
+class ConfirmedApi(viewsets.ModelViewSet):
+	queryset = Total.objects.all()
+	serializer_class = TotalConfirmedSerializer
+	http_method_names = ['get']
 
 class SampleApi(viewsets.ModelViewSet):
 	queryset = Total.objects.all()
@@ -43,15 +47,15 @@ class TotalApi(viewsets.ModelViewSet):
 	serializer_class = TotalSerializer
 	http_method_names = ['get']
 
-@login_required(login_url='login')
+
 def total_latest(request):
 	from bs4 import BeautifulSoup
 	import requests
 	tab = []
-	url = 'covid2.html'
-	#url = requests.get('https://covid19.ncdc.gov.ng/')
-	#soup = BeautifulSoup(url.content, 'html.parser')
-	soup = BeautifulSoup(open(url), 'html.parser')
+	#url = 'covid2.html'
+	url = requests.get('https://covid19.ncdc.gov.ng/')
+	soup = BeautifulSoup(url.content, 'html.parser')
+	#soup = BeautifulSoup(open(url), 'html.parser')
 	custom1 = soup.find(class_ = 'text-right text-white')
 	# tr = custom1.find_all('tr')
 	# print(tr.text)
